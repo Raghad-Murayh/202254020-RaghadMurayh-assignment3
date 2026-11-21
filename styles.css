@@ -123,7 +123,7 @@ section h1 {
 }
 
 .project-card {
-    flex: 1;
+    flex: 0 0 calc(50% - 15px);
 
     background-color: white;
 
