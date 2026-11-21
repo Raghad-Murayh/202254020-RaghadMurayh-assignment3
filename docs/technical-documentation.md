@@ -49,6 +49,41 @@ The Hospital Appointment System is categorized as `database`, while the Student 
 The project filter is implemented using a dropdown menu. When the selected option changes, JavaScript compares the selected value with each project's category and displays only the matching projects.
 
 Selecting All Projects displays both projects.
+## Project Sorting
+
+A sorting dropdown allows users to arrange the project cards alphabetically using A-Z or Z-A.
+
+JavaScript reads each project's title and changes the order of the project cards based on the selected sorting option. The sorting feature works together with the existing project filtering feature.
+
+## External Date API
+
+The website uses an external API to retrieve the current date for the `Asia/Riyadh` timezone.
+
+JavaScript uses `fetch()` to retrieve the data. The date is formatted in English and displayed in the navigation area.
+
+If the API request fails, the website displays `Date unavailable`.
+
+## Project Layout Improvement
+
+The project-card layout was adjusted so that when filtering displays only one project, the card keeps approximately the same width as when both projects are displayed instead of expanding across the entire Projects section.
+
+## Benefits and Challenges
+
+### Benefits
+
+The external API allows the website to display current information dynamically.
+
+Project filtering and sorting make it easier for users to organize and view the projects.
+
+The existing `localStorage` theme preference improves the user experience by remembering the selected theme after refreshing the page.
+
+### Challenges
+
+One challenge was integrating the external API and handling cases where the API request fails.
+
+Another challenge was making project sorting work together with the existing filtering feature.
+
+The project-card layout also needed adjustment because a single filtered project originally expanded across the available width.
 
 ## Contact Form Feedback
 
