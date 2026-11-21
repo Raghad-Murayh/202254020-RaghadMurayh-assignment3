@@ -37,3 +37,24 @@ contactForm.addEventListener("submit", function (event) {
     formFeedback.textContent =
         "Thank you! Your form was submitted successfully.";
 });
+// date api
+const currentDate = document.getElementById("current-date");
+
+fetch("https://timeapi.io/api/time/current/zone?timeZone=Asia/Riyadh")
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+
+        const date = new Date(data.dateTime);
+
+        currentDate.textContent = date.toLocaleDateString("en-US", {
+            month: "long",
+            day: "numeric",
+            year: "numeric"
+        });
+
+    })
+    .catch(function () {
+        currentDate.textContent = "Date unavailable";
+    });

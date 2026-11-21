@@ -228,6 +228,13 @@ body.dark-mode #theme-toggle {
     background-color: #444;
     color: white;
 }
+/* date*/
+#current-date {
+    color: white;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
 
 
 /* Responsive Design */
@@ -250,6 +257,9 @@ body.dark-mode #theme-toggle {
 
     section {
         padding: 50px 20px;
+    }
+    #current-date {
+        display: none;
     }
 
 }
