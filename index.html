@@ -37,12 +37,16 @@
         <section id="projects">
             <h1>My Projects</h1>
             <label for="project-filter">Filter projects:</label>
-
-<select id="project-filter">
-    <option value="all">All Projects</option>
-    <option value="web">Web Projects</option>
-    <option value="database">Database Projects</option>
-</select>
+            <select id="project-filter">
+                <option value="all">All</option>
+                <option value="database">Database Projects</option>
+                <option value="web">Web Projects</option>
+            </select>
+            <label for="project-sort">Sort projects:</label>
+            <select id="project-sort">
+                <option value="az">A-Z</option>
+                <option value="za">Z-A</option>
+            </select>
             <div class="projects-container">
                 <!-- Project 1 -->
                 <div class="project-card" data-category="database">

@@ -29,6 +29,33 @@ projectFilter.addEventListener("change", function () {
         }
     });
 });
+// Project sorting
+
+const projectSort = document.getElementById("project-sort");
+const projectsContainer = document.querySelector(".projects-container");
+
+projectSort.addEventListener("change", function () {
+
+    const cards = Array.from(projectCards);
+
+    cards.sort(function (a, b) {
+
+        const titleA = a.querySelector("h2").textContent;
+        const titleB = b.querySelector("h2").textContent;
+
+        if (projectSort.value === "az") {
+            return titleA.localeCompare(titleB);
+        } else {
+            return titleB.localeCompare(titleA);
+        }
+
+    });
+
+    cards.forEach(function (card) {
+        projectsContainer.appendChild(card);
+    });
+
+});
 // Contact form feedback
 const contactForm = document.getElementById("contact-form");
 const formFeedback = document.getElementById("form-feedback");
@@ -58,3 +85,4 @@ fetch("https://timeapi.io/api/time/current/zone?timeZone=Asia/Riyadh")
     .catch(function () {
         currentDate.textContent = "Date unavailable";
     });
+    
