@@ -118,6 +118,10 @@ section h1 {
     font-size: 16px;
     cursor: pointer;
 }
+#project-filter {
+    padding: 4px 8px;
+    font-size: 14px;
+}
 .projects-container {
     display: flex;
     gap: 30px;
